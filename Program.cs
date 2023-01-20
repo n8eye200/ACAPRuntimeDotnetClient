@@ -10,11 +10,11 @@ internal class Program
 
         var newStreamRequest = new Videocapture.V1.NewStreamRequest();
 
-        newStreamRequest.Settings = new Videocapture.V1.StreamSettings();
-
-        newStreamRequest.Settings.Width = 1920;
-        newStreamRequest.Settings.Height = 1080;
-        newStreamRequest.Settings.Format = Videocapture.V1.StreamFormat.VdoFormatJpeg;
+        newStreamRequest.Settings = new Videocapture.V1.StreamSettings() {
+            Width = 640,
+            Height = 480,
+            Format = Videocapture.V1.StreamFormat.VdoFormatJpeg
+        };
 
         Console.WriteLine("Requested Video Stream Settings: " + newStreamRequest.ToString());
 
